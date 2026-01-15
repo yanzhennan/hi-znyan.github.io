@@ -18,10 +18,3 @@ permalink: /
 ## 关于我
 
 我是一名热爱技术的开发者，专注于前端开发和开源技术。
-
-## 联系方式
-
-- 邮箱：[hi_znyan@163.com](mailto:hi_znyan@163.com)
-- GitHub：[hi-znyan](https://github.com/hi-znyan)
-- Twitter：
-- LinkedIn：
