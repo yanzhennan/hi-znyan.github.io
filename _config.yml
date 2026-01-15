@@ -1,5 +1,5 @@
-title: 我的个人博客
-description: 这是我的个人博客网站
+title: 个人博客
+description: 博客网站
 baseurl: ""
 url: "https://yanzhennan.github.io"
 
@@ -18,11 +18,10 @@ header_pages:
 
 # 作者信息
 author:
-  name: "Znyan"
+  name: "Yzn"
   email: "hi_znyan@163.com"
   github: "hi-znyan"
-  twitter: ""
-  linkedin: ""
+  QQ: "735151668"
 
 # 分页
 paginate: 5
