@@ -15,20 +15,17 @@ permalink: /about/
 ## 教育背景
 
 - 本科：计算机科学与技术
-- 硕士：软件工程
 
 ## 工作经历
 
-- 前端开发工程师
-- 全栈开发工程师
+- 后端开发工程师
 
 ## 技能栈
 
-- 前端：HTML, CSS, JavaScript, React, Vue
-- 后端：Node.js, Python, Ruby
-- 数据库：MySQL, MongoDB
-- 版本控制：Git, GitHub
-- 其他：Docker, AWS, Linux
+- 前端：HTML, CSS, JavaScript, jQuery
+- 后端：Java, Spring Boot
+- 数据库：MySQL, Oracle
+- 版本控制：Git, GitHub ,Svn
 
 ## 兴趣爱好
 

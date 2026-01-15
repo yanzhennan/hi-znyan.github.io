@@ -14,7 +14,3 @@ permalink: /
 ### [{{ post.title }}]({{ post.url }})
 {{ post.date | date: "%Y-%m-%d" }} - {{ post.excerpt | strip_html | truncate: 150 }}
 {% endfor %}
-
-## 关于我
-
-我是一名热爱技术的开发者，专注于前端开发和开源技术。
