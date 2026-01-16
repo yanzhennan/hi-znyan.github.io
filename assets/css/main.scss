@@ -458,6 +458,136 @@ pre code {
   margin-bottom: 0.5rem;
 }
 
+// 卡片式布局
+.post-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.post-card {
+  background-color: $content-background;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid $border-color;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.post-card-content {
+  padding: 1.5rem;
+}
+
+.post-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.post-card-title a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.post-card-title a:hover {
+  color: $link-color;
+}
+
+.post-card .post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.post-card .post-date {
+  color: $text-light;
+}
+
+.post-card .post-category {
+  background-color: $primary-color;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.post-excerpt {
+  color: $text-light;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post-tag {
+  background-color: $background-color;
+  color: $text-light;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  border: 1px solid $border-color;
+}
+
+// 分页样式
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.pagination-item {
+  padding: 0.75rem 1.5rem;
+  background-color: $content-background;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  color: $text-color;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pagination-item:hover {
+  background-color: $primary-color;
+  color: white;
+  border-color: $primary-color;
+}
+
+.pagination-item.older,
+.pagination-item.newer {
+  font-weight: 500;
+}
+
+.pagination-item:disabled,
+.pagination-item[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-item:disabled:hover,
+.pagination-item[disabled]:hover {
+  background-color: $content-background;
+  color: $text-color;
+  border-color: $border-color;
+}
+
 // 单篇文章优化
 .post {
   margin-bottom: 3rem;
@@ -598,5 +728,45 @@ img {
   .post-list-item:hover {
     transform: none;
     box-shadow: none;
+  }
+  
+  // 移动端卡片布局
+  .post-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .post-card {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+  
+  .post-card:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-card-content {
+    padding: 1.25rem;
+  }
+  
+  .post-card-title {
+    font-size: 1.1rem;
+  }
+  
+  .post-card .post-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pagination-item {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
   }
 }
