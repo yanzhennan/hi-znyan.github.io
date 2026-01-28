@@ -4,6 +4,9 @@ title: "JRebel 激活方式二备份"
 date: 2026-01-15 14:00:00 +0800
 categories: 技术
 tags: jrebel 激活 备份
+image: /assets/images/2026-01-15-jrebel-activation/download-page.png
+category: 开发工具
+excerpt: 详细介绍 JRebel 的激活方法，包括下载反向代理服务包、运行服务、生成 GUID 和配置激活等完整步骤，帮助你快速完成 JRebel 的激活设置。
 ---
 
 ## 方式二（推荐）

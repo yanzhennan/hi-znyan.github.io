@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle exec jekyll:*)",
+      "Bash(findstr:*)",
+      "Bash(rm:*)",
+      "Skill(frontend-design)"
+    ]
+  }
+}

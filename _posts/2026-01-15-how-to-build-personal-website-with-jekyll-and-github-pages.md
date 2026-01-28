@@ -4,6 +4,9 @@ title: "如何使用 Jekyll + GitHub Pages 搭建个人网站"
 date: 2026-01-15 10:00:00 +0800
 categories: 技术
 tags: jekyll github-pages 博客
+image: /assets/images/avatar.svg
+category: 教程
+excerpt: 详细介绍如何使用 Jekyll 和 GitHub Pages 免费搭建个人网站或博客，从环境准备到部署上线，一步步教你创建属于你的个人空间。
 ---
 
 ## 什么是 Jekyll 和 GitHub Pages？

@@ -2,63 +2,49 @@
 layout: default
 ---
 
-<div class="home">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-avatar">
-        <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="avatar-img">
-      </div>
-      <div class="hero-info">
-        <h1 class="hero-name">{{ site.author.name }}</h1>
-        <p class="hero-bio">{{ site.author.bio }}</p>
-        <div class="hero-social">
-          {% include social.html %}
+<div class="home-container">
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2 class="hero-title">{{ site.title }}</h2>
+            <p class="hero-subtitle">{{ site.author.bio }}</p>
+            <div class="hero-accent"></div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Content Section -->
-  {%- if page.title -%}
-    <div class="page-intro">
-      <h2 class="page-heading">{{ page.title }}</h2>
-      {{ content | markdownify }}
-    </div>
-  {%- endif -%}
+    <section class="posts-section">
+        <div class="section-header">
+            <h2 class="section-title">文章</h2>
+            <div class="section-accent"></div>
+        </div>
 
-  <!-- Posts Section -->
-  {%- if site.posts.size > 0 -%}
-    <div class="section-header">
-      <h2 class="post-list-heading">{{ page.list_title | default: "文章列表" }}</h2>
-    </div>
-    <div class="post-cards">
-      {%- for post in site.posts -%}
-        <article class="post-card">
-          <div class="post-card-content">
-            <h3 class="post-card-title">
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-          </div>
-        </article>
-      {%- endfor -%}
-    </div>
-
-    {%- if site.paginate -%}
-      <div class="pagination">
-        {%- if paginator.previous_page -%}
-          <a class="pagination-item older" href="{{ paginator.previous_page_path | relative_url }}">上一页</a>
-        {%- else -%}
-          <span class="pagination-item older">上一页</span>
-        {%- endif -%}
-        {%- if paginator.next_page -%}
-          <a class="pagination-item newer" href="{{ paginator.next_page_path | relative_url }}">下一页</a>
-        {%- else -%}
-          <span class="pagination-item newer">下一页</span>
-        {%- endif -%}
-      </div>
-    {%- endif -%}
-  {%- endif -%}
+        <div class="posts-grid">
+            {% for post in site.posts %}
+            <article class="post-card">
+                <div class="post-card-inner">
+                    <div class="post-card-header">
+                        <span class="post-category">{{ post.category | default: post.categories[0] }}</span>
+                        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%Y年%m月%d日" }}
+                        </time>
+                    </div>
+                    <h3 class="post-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </h3>
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                    <a href="{{ post.url | relative_url }}" class="post-read-more">阅读全文</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
 </div>
+
+<script>
+    // Add staggered animation to posts
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.post-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    });
+</script>

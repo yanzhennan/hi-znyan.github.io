@@ -3,18 +3,19 @@ description: 博客网站
 baseurl: ""
 url: "https://yanzhennan.github.io"
 
-# 主题设置
-theme: minima
+# 主题设置 - 使用自定义布局
+# theme: minima
 
 # 插件
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
 
-# 导航菜单
-header_pages:
-  - about.md
-  - contact.md
+# 导航菜单（暂时移除，因为没有这些页面）
+# header_pages:
+#   - about.md
+#   - contact.md
 
 # 作者信息
 author:
@@ -63,3 +64,5 @@ exclude:
   - "*.swo"
   - ".DS_Store"
   - ".idea"
+  - "nul"
+  - ".claude"
